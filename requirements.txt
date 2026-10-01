@@ -1,4 +1,4 @@
-pip install flask
+"""pip install flask
 pip install numpy
 pip install joblib
 pip install requests
@@ -7,4 +7,15 @@ pip install request
 pip install whois
 pip install googlesearch-python
 pip install scikit-learn
-pip install catboost
+pip install catboost"""
+
+flask
+numpy
+joblib
+requests
+beautifulsoup4
+python-whois
+googlesearch-python
+scikit-learn
+catboost
+gunicorn
