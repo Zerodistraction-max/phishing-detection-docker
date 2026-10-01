@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Surakshit Bharat - Cyber Security Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Indian Tricolor Theme Accents */
+        .tricolor-bar {
+            height: 5px;
+            background: linear-gradient(to right, #FF9933 33%, #FFFFFF 33%, #FFFFFF 66%, #138808 66%);
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 2px;
+        }
+        .language-switcher {
+            text-align: right;
+            margin-bottom: 15px;
+        }
+        .lang-btn {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .lang-btn:hover, .lang-btn.active {
+            background-color: #FF9933;
+            border-color: #FF9933;
+            box-shadow: 0 0 10px rgba(255, 153, 51, 0.5);
+        }
+        .emergency-block {
+            border: 2px solid #dc3545;
+            background-color: rgba(220, 53, 69, 0.12);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            animation: pulseBorder 2.5s infinite;
+        }
+        @keyframes pulseBorder {
+            0% { border-color: #dc3545; box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.4); }
+            70% { border-color: #FF9933; box-shadow: 0 0 0 8px rgba(220, 53, 69, 0); }
+            100% { border-color: #dc3545; box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+        }
+        .info-box {
+            background-color: rgba(0, 188, 212, 0.1);
+            border-left: 4px solid #00bcd4;
+            padding: 15px;
+            margin: 15px 0 0 0;
+            border-radius: 0 8px 8px 0;
+        }
+        /* Vertical Dropbox Accordion Layout */
+        details {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        details[open] {
+            background: rgba(255, 255, 255, 0.09);
+            border-color: rgba(0, 188, 212, 0.3);
+        }
+        .scam-section details {
+            border-left: 4px solid #FF9933;
+        }
+        .faq-section details {
+            border-left: 4px solid #138808;
+        }
+        summary {
+            font-weight: bold;
+            color: #ffc107;
+            outline: none;
+            font-size: 16px;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary::after {
+            content: '▼';
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+            transition: transform 0.3s;
+        }
+        details[open] summary::after {
+            transform: rotate(180deg);
+            color: #ffc107;
+        }
+        .dropdown-content {
+            margin-top: 12px;
+            line-height: 1.6;
+            color: #e0e0e0;
+            animation: fadeIn 0.4s ease;
+        }
+        .motivational-quote {
+            border-left: 4px solid #FF9933;
+            border-right: 4px solid #138808;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 20px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 35px;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+        .lang-en, .lang-hi {
+            display: none;
+        }
+        /* Default state active via JS triggers */
+        .show-content {
+            display: block !important;
+        }
+    </style>
+</head>
+<body>
+
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="{{ url_for('static', filename='videos/background_video.mp4') }}" type="video/mp4">
+    </video>
+
+    <div id="contentWrapper">
+        <header>
+            <nav>
+                <a href="{{ url_for('home') }}">HOME</a>
+                <a href="{{ url_for('usecases') }}">PHISHING EDUCATION</a>
+                <a href="{{ url_for('about') }}">ABOUT THE PROJECT</a>
+            </nav>
+        </header>
+
+        <main class="info-section" style="text-align: left; max-width: 850px;">
+            <div class="tricolor-bar"></div>
+            
+            <div class="language-switcher">
+                <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">English</button>
+                <button class="lang-btn" id="btn-hi" onclick="setLanguage('hi')">हिन्दी</button>
+            </div>
+
+            <div id="content-en" class="lang-en show-content">
+                <h2 style="color: #FF9933; text-align: center; margin-bottom: 5px; font-size: 2em; letter-spacing: 1px;">Cyber Surakshit Bharat</h2>
+                <p style="text-align: center; font-style: italic; color: #00bcd4; margin-top: 0; margin-bottom: 30px; font-size: 1.1em; font-weight: bold;">"Sashakt Bharat, Surakshit Bharat"</p>
+
+                <div style="background: rgba(255,255,255,0.03); padding: 18px; border-radius: 8px; margin-bottom: 25px; border: 1px solid rgba(255,255,255,0.05);">
+                    <h4 style="margin-top:0; color:#00bcd4; font-size:16px;">What is a Phishing Attack?</h4>
+                    <p style="margin-bottom:0; font-size:14px; line-height:1.5;">Phishing is a digital trap where cybercriminals send fraudulent messages (emails, SMS, or WhatsApp alerts) mimicking trusted entities like your bank, utility boards, or government departments. Their goal is to deceive you into sharing confidential credentials, clicking malicious links, or approving unauthorized payment processing pipelines.</p>
+                </div>
+
+                <div class="emergency-block">
+                    <h3 style="color: #dc3545; margin-top: 0; font-size: 1.3em;">🚨 IMMEDIATE ACTION: Financial Cyber Fraud</h3>
+                    <p>If you have lost money to a digital scam, every minute inside the <strong>"Golden Hour"</strong> matters:</p>
+                    <ol style="line-height: 1.8;">
+                        <li><strong>Dial the National Cyber Crime Helpline 1930 immediately.</strong> This connects you to active bank-police interdiction grids to freeze stolen currency before it leaves the banking system.</li>
+                        <li>File an official report online via <a href="https://cybercrime.gov.in/" target="_blank" style="color: #00bcd4; font-weight: bold;">cybercrime.gov.in</a>.</li>
+                    </ol>
+                    <div class="info-box">
+                        <strong>💡 RBI Protection:</strong> Under Reserve Bank of India mandates, reporting digital banking fraud within <strong>3 days</strong> keeps your personal liability at absolute zero.
+                    </div>
+                </div>
+
+                <h3 style="color: #FF9933; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">Current High-Risk Scams in India</h3>
+                <div class="scam-section">
+                    <details>
+                        <summary>1. The FedEx / India Post Custom Parcel Scam</summary>
+                        <div class="dropdown-content">
+                            You receive an urgent call from scammers pretending to be customs officials or courier executives. They claim a parcel containing illegal items (like narcotics or fake passports) has been intercepted in your name. They terrify you with threats of immediate police arrest and force you into a "digital arrest" via Skype/WhatsApp to steal your money as fake clearance fees.
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>2. AI Voice & Deepfake Emergency Scams</summary>
+                        <div class="dropdown-content">
+                            Scammers use advanced artificial intelligence to perfectly clone the voice of your child, relative, or friend using short audio clips from social media. They call you sounding desperate, claiming they are in extreme danger, have been arrested, or met with a severe accident, begging you to urgently transfer emergency cash via UPI.
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>3. Part-Time Job / Telegram Rating Scams</summary>
+                        <div class="dropdown-content">
+                            Sent via WhatsApp or Telegram, this scam promises high daily payouts for simple tasks like liking YouTube videos or writing hotel reviews. Initially, they pay small profits to gain your trust, then force you into a trap where you must "invest" larger sums of money into crypto-wallets to unlock your accumulated earnings, which disappear completely.
+                        </div>
+                    </details>
+                </div>
+
+                <h3 style="color: #138808; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px; margin-top: 30px;">Tailored Recovery & Prevention FAQ</h3>
+                <div class="faq-section">
+                    <details>
+                        <summary>What should I do if I accidentally shared my UPI PIN or Banking Password?</summary>
+                        <div class="dropdown-content">
+                            Open your banking app immediately and change your PIN and password configuration. If you cannot log in, call your bank's emergency blocking number or use internet banking to freeze your debit cards, credit cards, and completely block your digital UPI accounts.
+                        </div>
+                    </details>
+                    <details>
+                        <summary>How can I block fraudulent callers and spam text loops permanently?</summary>
+                        <div class="dropdown-content">
+                            Do not click any tracking links or reply. Report the exact mobile number or sender ID immediately to the Government of India's **Chakshu Portal** via the Sanchar Saathi website. This assists Telecom regulatory bodies in blocking the scammer's physical device IMEI address at a national scale.
+                        </div>
+                    </details>
+                    <details>
+                        <summary>What is the recovery path if I am targeted by online blackmailers?</summary>
+                        <div class="dropdown-content">
+                            Do not panic, do not pay money, and cut off communication immediately. Capture screenshots of all profiles, chat channels, and financial transaction references. File an official complaint under the anonymous protection framework inside the National Cyber Crime Reporting Portal.
+                        </div>
+                    </details>
+                </div>
+
+                <div class="motivational-quote" style="color: #ffc107;">
+                    🛡️ "Your awareness is your strongest shield. By keeping yourself alert, you protect not just your hard-earned money, but also fortify our nation's digital defense. Let's unite to build a cyber-safe India!"
+                </div>
+            </div>
+
+            <div id="content-hi" class="lang-hi">
+                <h2 style="color: #FF9933; text-align: center; margin-bottom: 5px; font-size: 2em; letter-spacing: 1px;">साइबर सुरक्षित भारत</h2>
+                <p style="text-align: center; font-style: italic; color: #00bcd4; margin-top: 0; margin-bottom: 30px; font-size: 1.1em; font-weight: bold;">"सशक्त भारत, सुरक्षित भारत"</p>
+
+                <div style="background: rgba(255,255,255,0.03); padding: 18px; border-radius: 8px; margin-bottom: 25px; border: 1px solid rgba(255,255,255,0.05);">
+                    <h4 style="margin-top:0; color:#00bcd4; font-size:16px;">फ़िशिंग (Phishing) हमला क्या है?</h4>
+                    <p style="margin-bottom:0; font-size:14px; line-height:1.5;">फ़िशिंग एक डिजिटल धोखाधड़ी है जिसमें अपराधी आपके बैंक, बिजली विभाग या सरकारी संस्थाओं के नाम पर फर्जी संदेश (SMS, ईमेल या व्हाट्सएप) भेजते हैं। इनका मुख्य उद्देश्य आपको डराकर या लालच देकर आपकी बैंकिंग जानकारी, पासवर्ड या ओटीपी चुराना होता है।</p>
+                </div>
+
+                <div class="emergency-block">
+                    <h3 style="color: #dc3545; margin-top: 0; font-size: 1.3em;">🚨 तत्काल कार्रवाई: वित्तीय साइबर धोखाधड़ी</h3>
+                    <p>यदि आपके साथ कोई डिजिटल धोखाधड़ी हुई है, तो शुरुआती 1 घंटा (गोल्डन ऑवर) बेहद महत्वपूर्ण है:</p>
+                    <ol style="line-height: 1.8;">
+                        <li><strong>तुरंत राष्ट्रीय हेल्पलाइन नंबर 1930 पर कॉल करें।</strong> यह नंबर आपके बैंक खातों से चुराए गए पैसों को आगे ट्रांसफर होने से रोकने के लिए पुलिस-बैंक नेटवर्क को तुरंत सक्रिय करता है।</li>
+                        <li>अपनी शिकायत ऑनलाइन दर्ज करने के लिए <a href="https://cybercrime.gov.in/" target="_blank" style="color: #00bcd4; font-weight: bold;">cybercrime.gov.in</a> पर जाएं।</li>
+                    </ol>
+                    <div class="info-box">
+                        <strong>💡 आरबीआई का नियम:</strong> भारतीय रिजर्व बैंक (RBI) के दिशानिर्देशों के अनुसार, यदि आप डिजिटल धोखाधड़ी के <strong>3 दिनों</strong> के भीतर रिपोर्ट करते हैं, तो आपकी देनदारी शून्य हो जाती है।
+                    </div>
+                </div>
+
+                <h3 style="color: #FF9933; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">भारत में वर्तमान समय के सबसे बड़े साइबर घोटाले</h3>
+                <div class="scam-section">
+                    <details>
+                        <summary>1. फेडेक्स / इंडिया पोस्ट कस्टम पार्सल घोटाला (Courier Scam)</summary>
+                        <div class="dropdown-content">
+                            जालसाज सीमा शुल्क (Customs) अधिकारी बनकर कॉल करते हैं और दावा करते हैं कि आपके नाम पर भेजे गए पार्सल में अवैध दवाएं या हथियार पाए गए हैं। वे आपको तुरंत पुलिस गिरफ्तारी का डर दिखाते हैं और वीडियो कॉल (Skype/WhatsApp) पर रहने को मजबूर करते हैं, जिसे 'डिजिटल अरेस्ट' कहा जाता है, और मामला रफा-दफा करने के नाम पर पैसे वसूलते हैं।
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>2. एआई वॉयस क्लोनिंग और डीपफेक इमरजेंसी स्कैम</summary>
+                        <div class="dropdown-content">
+                            अपराधी सोशल मीडिया से आपके बच्चों या रिश्तेदारों की आवाज का छोटा सैंपल लेकर, आर्टिफिशियल इंटेलिजेंस (AI) की मदद से उनकी हूबहू आवाज तैयार कर लेते हैं। फिर वे आपको रोते हुए कॉल करते हैं कि वे किसी बड़ी मुसीबत, पुलिस कस्टडी या एक्सीडेंट में फंस गए हैं और तुरंत यूपीआई द्वारा पैसे भेजने की गुहार लगाते हैं।
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary>3. पार्ट-टाइम जॉब और टेलीग्राम रेटिंग फ्रॉड</summary>
+                        <div class="dropdown-content">
+                            व्हाट्सएप या टेलीग्राम पर आने वाले इन संदेशों में यूट्यूब वीडियो को लाइक करने या होटल रिव्यू लिखने जैसी आसान नौकरियों के लिए भारी कमाई का लालच दिया जाता है। शुरू में भरोसा जीतने के लिए वे कुछ पैसे देते हैं, लेकिन बाद में बड़ी रकम 'इन्वेस्ट' करने का दबाव बनाते हैं, जिसके बाद वे पूरी रकम लेकर गायब हो जाते हैं।
+                        </div>
+                    </details>
+                </div>
+
+                <h3 style="color: #138808; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px; margin-top: 30px;">अक्सर पूछे जाने वाले सवाल (FAQ)</h3>
+                <div class="faq-section">
+                    <details>
+                        <summary>अगर मैंने गलती से अपना यूपीआई पिन या पासवर्ड शेयर कर दिया है, तो क्या करूं?</summary>
+                        <div class="dropdown-content">
+                            अपने बैंकिंग ऐप को तुरंत खोलकर पिन और पासवर्ड बदलें। यदि लॉगिन नहीं हो पा रहा है, तो तुरंत अपने बैंक के कस्टमर केयर को कॉल करके अपने डेबिट/क्रेडिट कार्ड को ब्लॉक करवाएं और अपनी डिजिटल यूपीआई आईडी को पूरी तरह डीएक्टिवेट कराएं।
+                        </div>
+                    </details>
+                    <details>
+                        <summary>फर्जी कॉल्स और धोखाधड़ी वाले संदेशों की शिकायत कहां करें?</summary>
+                        <div class="dropdown-content">
+                            संदेश में दिए गए किसी भी लिंक पर क्लिक न करें। ऐसे संदिग्ध नंबरों की रिपोर्ट भारत सरकार के संचार साथी पोर्टल पर उपलब्ध **'चक्षु पोर्टल' (Chakshu Portal)** पर करें। इससे सरकार को उन जालसाजों के मोबाइल डिवाइस (IMEI) को हमेशा के लिए ब्लॉक करने में मदद मिलती है।
+                        </div>
+                    </details>
+                    <details>
+                        <summary>यदि मुझे ऑनलाइन ब्लैकमेल या मोर्फ्ड वीडियो द्वारा धमकी दी जा रही है, तो क्या करें?</summary>
+                        <div class="dropdown-content">
+                            बिल्कुल न डरें और जालसाज को एक भी रुपया न दें। सभी चैट, प्रोफाइल लिंक और कॉल डिटेल्स के स्क्रीनशॉट लें। तुरंत नेशनल साइबर क्राइम पोर्टल पर जाकर 'Anonymous' (गोपनीय) विकल्प के तहत अपनी शिकायत दर्ज करें ताकि आपकी पहचान सुरक्षित रहे।
+                        </div>
+                    </details>
+                </div>
+
+                <div class="motivational-quote" style="color: #ffc107;">
+                    🛡️ "आपकी सतर्कता ही देश की सुरक्षा है। जब आप जागरूक रहते हैं, तो आप केवल अपनी मेहनत की कमाई नहीं बचाते, बल्कि हमारे डिजिटल भारत की नींव को भी मजबूत करते हैं। आइए मिलकर भारत को साइबर-सुरक्षित बनाएं!"
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        function setLanguage(lang) {
+            // Remove visibility from both layers
+            document.getElementById('content-en').classList.remove('show-content');
+            document.getElementById('content-hi').classList.remove('show-content');
+            document.getElementById('btn-en').classList.remove('active');
+            document.getElementById('btn-hi').classList.remove('active');
+
+            // Activate specific node selection paths
+            if (lang === 'en') {
+                document.getElementById('content-en').classList.add('show-content');
+                document.getElementById('btn-en').classList.add('active');
+            } else if (lang === 'hi') {
+                document.getElementById('content-hi').classList.add('show-content');
+                document.getElementById('btn-hi').classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+</html>

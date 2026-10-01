@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Project - Cyber Surakshit Bharat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* India Themed Custom Overrides for About Page */
+        .tricolor-accent {
+            height: 4px;
+            background: linear-gradient(to right, #FF9933 33%, #FFFFFF 33%, #FFFFFF 66%, #138808 66%);
+            width: 100%;
+            margin-bottom: 30px;
+            border-radius: 2px;
+        }
+        .section-split {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        @media (min-width: 768px) {
+            .section-split {
+                grid-template-columns: 1.2fr 0.8fr;
+            }
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        .highlight-text {
+            color: #FF9933;
+            font-weight: 600;
+        }
+        .badge {
+            background: rgba(0, 188, 212, 0.15);
+            border: 1px solid #00bcd4;
+            color: #00bcd4;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .college-title {
+            color: #ffc107;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+        .team-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .team-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+        }
+        .team-list li::before {
+            content: "🛡️";
+            margin-right: 12px;
+            font-size: 0.9em;
+        }
+        .team-list li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="{{ url_for('static', filename='videos/background_video.mp4') }}" type="video/mp4">
+    </video>
+
+    <div id="contentWrapper">
+        <header>
+            <nav>
+                <a href="{{ url_for('home') }}">HOME</a>
+                <a href="{{ url_for('usecases') }}">PHISHING EDUCATION</a>
+                <a href="{{ url_for('about') }}">ABOUT THE PROJECT</a>
+            </nav>
+        </header>
+
+        <main style="max-width: 1000px; text-align: left; padding: 40px;">
+            <div class="tricolor-accent"></div>
+
+            <div class="section-split">
+                
+                <div>
+                    <span class="badge">EPICS Project</span>
+                    <h2 style="color: #FF9933; margin-top: 0; font-size: 2em; letter-spacing: 0.5px;">About The Project</h2>
+                    
+                    <div class="glass-panel">
+                        <h3 style="color: #ffc107; margin-top: 0;">The Problem Statement</h3>
+                        <p style="line-height: 1.7; color: rgba(255, 255, 255, 0.9);">
+                            Traditional legal and security strategies rely heavily on manual verification blocks like static URL blacklists. However, malicious agents change domain hosts constantly, rendering static filters ineffective against <span class="highlight-text">zero-hour phishing traps</span>. As digital platforms expand across our daily workflows, these sophisticated cyber-threats cause severe financial harm and compromise personal data security.
+                        </p>
+                    </div>
+
+                    <div class="glass-panel">
+                        <h3 style="color: #ffc107; margin-top: 0;">Our Strategic Approach</h3>
+                        <p style="line-height: 1.7; color: rgba(255, 255, 255, 0.9);">
+                            Instead of verifying links against a fixed list of known domains, our framework utilizes an intelligent machine learning pipeline. By parsing <span class="highlight-text">30 distinct lexical, structural, and network attributes</span> extracted directly from any user input, the underlying <strong>Gradient Boosting Classifier</strong> evaluates real-time structural features to detect patterns indicative of spoofing attempts.
+                        </p>
+                    </div>
+
+                    <div class="glass-panel">
+                        <h3 style="color: #ffc107; margin-top: 0;">Relevance & Social Impact</h3>
+                        <p style="line-height: 1.7; color: rgba(255, 255, 255, 0.9);">
+                            By shifting protection from retrospective tracking to predictive machine learning, this system creates a robust security layer for daily internet activities. It serves as an automated, scalable tool that empowers users to identify deceptive links, protect sensitive data, and foster a safer digital environment.
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="badge" style="background: rgba(19, 136, 8, 0.15); border-color: #138808; color: #138808;">Community Service</span>
+                    <h2 style="color: #138808; margin-top: 0; font-size: 2em; letter-spacing: 0.5px;">The Innovation Team</h2>
+                    
+                    <div class="glass-panel" style="border-top: 3px solid #138808;">
+                        <h4 style="margin: 0 0 5px 0; text-transform: uppercase; font-size: 0.85em; color: rgba(255, 255, 255, 0.6); letter-spacing: 1px;">Institution</h4>
+                        <span class="college-title">VIT BHOPAL UNIVERSITY</span>
+                        
+                        <h4 style="margin: 20px 0 5px 0; text-transform: uppercase; font-size: 0.85em; color: rgba(255, 255, 255, 0.6); letter-spacing: 1px;">Course Domain</h4>
+                        <p style="margin: 0; font-weight: 600; color: #fff;">EPICS Engineering Project in Community Service</p>
+                    </div>
+
+                    <div class="glass-panel">
+                        <h3 style="color: #ffc107; margin-top: 0; font-size: 1.1em; letter-spacing: 0.5px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 8px;">Project Contributors</h3>
+                        <ul class="team-list">
+                            <li><strong>Suryansh Sapehia</strong></li>
+                            <li><strong>Karan Singh Negi</strong></li>
+                            <li><strong>Pragati Singh</strong></li>
+                            <li><strong>Ritika Raghuvanshi</strong></li>
+                            <li><strong>Prasiddhi Jain</strong></li>
+                            <li><strong>Akshat Pandey</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
