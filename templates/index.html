@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +28,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
             height: 60px;
             border-bottom: 2px solid var(--navy-blue);
         }
@@ -38,7 +39,7 @@
             font-size: 1.4rem;
             padding-left: 30px;
             letter-spacing: 0.5px;
-            text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
         }
 
         .menu-section {
@@ -47,7 +48,8 @@
             height: 100%;
         }
 
-        .menu-section a, .menu-section .dropbtn {
+        .menu-section a,
+        .menu-section .dropbtn {
             color: var(--navy-blue);
             text-decoration: none;
             font-weight: 700;
@@ -62,7 +64,8 @@
             cursor: pointer;
         }
 
-        .menu-section a:hover, .dropdown:hover .dropbtn {
+        .menu-section a:hover,
+        .dropdown:hover .dropbtn {
             background-color: rgba(0, 32, 128, 0.08);
             color: #000000;
         }
@@ -74,7 +77,11 @@
         }
 
         /* Dropdown Structure Fixes */
-        .dropdown { position: relative; height: 100%; }
+        .dropdown {
+            position: relative;
+            height: 100%;
+        }
+
         .dropdown-content {
             display: none;
             position: absolute;
@@ -82,11 +89,12 @@
             top: 60px;
             background-color: #ffffff;
             min-width: 255px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
             z-index: 2000;
             border-top: 4px solid var(--navy-blue);
             border-radius: 0 0 8px 8px;
         }
+
         .dropdown-content a {
             color: #222222 !important;
             padding: 14px 20px;
@@ -97,11 +105,15 @@
             text-align: left;
             margin: 0;
         }
+
         .dropdown-content a:hover {
             background-color: #f0f4ff;
             color: var(--navy-blue) !important;
         }
-        .dropdown:hover .dropdown-content { display: block; }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
         /* Frosted Glass blocks */
         .glass-block {
@@ -124,13 +136,24 @@
         }
 
         @keyframes alertPulse {
-            0% { border-color: var(--alert-red); box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.5); }
-            70% { border-color: #ffc107; box-shadow: 0 0 0 12px rgba(211, 47, 47, 0); }
-            100% { border-color: var(--alert-red); box-shadow: 0 0 0 0 rgba(211, 47, 47, 0); }
+            0% {
+                border-color: var(--alert-red);
+                box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.5);
+            }
+
+            70% {
+                border-color: #ffc107;
+                box-shadow: 0 0 0 12px rgba(211, 47, 47, 0);
+            }
+
+            100% {
+                border-color: var(--alert-red);
+                box-shadow: 0 0 0 0 rgba(211, 47, 47, 0);
+            }
         }
 
         .emergency-banner {
-            scroll-margin-top: 85px; 
+            scroll-margin-top: 85px;
             border: 3px solid var(--alert-red);
             border-radius: 12px;
             padding: 2rem;
@@ -157,7 +180,13 @@
             border-top: 4px solid var(--alert-red);
         }
 
-        .emergency-number { font-size: 2.5rem; font-weight: bold; color: var(--alert-red); display: block; margin: 10px 0; }
+        .emergency-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--alert-red);
+            display: block;
+            margin: 10px 0;
+        }
 
         /* --- F-Pattern Optimized Vertical Layout Containers --- */
         .scam-accordion {
@@ -168,11 +197,19 @@
             overflow: hidden;
             transition: all 0.3s ease;
         }
-        
+
         /* Left border colors to distinguish vertical status sweeps */
-        .scam-accordion.scam-1 { border-left: 5px solid var(--saffron); }
-        .scam-accordion.scam-2 { border-left: 5px solid #ffffff; }
-        .scam-accordion.scam-3 { border-left: 5px solid var(--green); }
+        .scam-accordion.scam-1 {
+            border-left: 5px solid var(--saffron);
+        }
+
+        .scam-accordion.scam-2 {
+            border-left: 5px solid #ffffff;
+        }
+
+        .scam-accordion.scam-3 {
+            border-left: 5px solid var(--green);
+        }
 
         .scam-summary {
             padding: 22px 25px;
@@ -183,7 +220,10 @@
             align-items: center;
             list-style: none;
         }
-        .scam-summary::-webkit-details-marker { display: none; }
+
+        .scam-summary::-webkit-details-marker {
+            display: none;
+        }
 
         .scam-summary-text-group {
             display: flex;
@@ -195,17 +235,30 @@
         }
 
         /* F-Pattern Top Anchored Headings */
-        .scam-summary h3 { color: #ffffff; margin: 0; font-size: 1.3rem; font-weight: 700; }
-        .scam-summary p { color: rgba(255, 255, 255, 0.75); margin: 0; font-size: 0.98rem; }
-        
+        .scam-summary h3 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .scam-summary p {
+            color: rgba(255, 255, 255, 0.75);
+            margin: 0;
+            font-size: 0.98rem;
+        }
+
         .expand-arrow-toggle {
             color: var(--saffron);
             font-size: 1.2rem;
             transition: transform 0.3s ease;
             font-weight: bold;
         }
-        .scam-accordion[open] .expand-arrow-toggle { transform: rotate(180deg); }
-        
+
+        .scam-accordion[open] .expand-arrow-toggle {
+            transform: rotate(180deg);
+        }
+
         /* F-Pattern Left-Heavy Content Alignment */
         .scam-details-content {
             padding: 5px 25px 25px 25px;
@@ -214,12 +267,12 @@
             text-align: left;
             animation: slideDown 0.3s ease-in-out;
         }
-        
+
         .f-row {
             margin-top: 15px;
             line-height: 1.7;
         }
-        
+
         /* Bold leading tokens to pull the eye horizontally during vertical sweeps */
         .f-lead {
             display: block;
@@ -230,7 +283,7 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        
+
         .f-lead.defense {
             color: #00bcd4;
         }
@@ -243,6 +296,7 @@
             border-radius: 6px;
             margin-bottom: 1rem;
         }
+
         .faq-item summary {
             padding: 1.2rem;
             font-weight: bold;
@@ -252,16 +306,54 @@
             justify-content: space-between;
             list-style: none;
         }
-        .faq-item summary::-webkit-details-marker { display: none; }
-        .faq-item summary::after { content: '▼'; color: var(--saffron); transition: transform 0.3s; }
-        .faq-item[open] summary::after { transform: rotate(180deg); }
-        .faq-pane { padding: 1.2rem; border-top: 1px solid rgba(255, 255, 255, 0.06); color: white; text-align: left; }
 
-        .about-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
-        @media (min-width: 768px) { .about-grid { grid-template-columns: 1.3fr 0.7fr; } }
-        @keyframes slideDown { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: '▼';
+            color: var(--saffron);
+            transition: transform 0.3s;
+        }
+
+        .faq-item[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-pane {
+            padding: 1.2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            color: white;
+            text-align: left;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1.3fr 0.7fr;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <video autoplay muted loop id="backgroundVideo">
@@ -275,7 +367,7 @@
             <div class="menu-section">
                 <a href="#emergency">Emergency Actions</a>
                 <a href="#scams">Top Indian Scams</a>
-                
+
                 <div class="dropdown">
                     <button class="dropbtn">Important Links ▼</button>
                     <div class="dropdown-content">
@@ -298,83 +390,101 @@
 
         <!-- Centered Hero Title Display -->
         <div style="padding: 5rem 2rem 3rem; text-align: center;">
-            <h1 style="font-size: 3.5rem; color: white; text-shadow: 2px 2px 12px rgba(0,0,0,0.95); margin: 0; font-weight: 800; letter-spacing: 0.5px;">Sashakt Bharat, Surakshit Bharat</h1>
+            <h1
+                style="font-size: 3.5rem; color: white; text-shadow: 2px 2px 12px rgba(0,0,0,0.95); margin: 0; font-weight: 800; letter-spacing: 0.5px;">
+                Sashakt Bharat, Surakshit Bharat</h1>
         </div>
 
         <div style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
-            
+
             <!-- SECTION 1: PREDICTIVE MACHINE LEARNING URL ENGINE -->
             <main style="margin: 10px auto 40px;">
                 <div class="tricolor-stripe"></div>
                 <h2>Predictive Phishing Analyzer</h2>
-                <p>Verify suspect domains instantly. Our machine learning engine checks internal structural markers to flag spoofed sites before they load.</p>
+                <p>Verify suspect domains instantly. Our machine learning engine checks internal structural markers to
+                    flag spoofed sites before they load.</p>
 
                 {% if error_text %}
-                    <div class="error-message">{{ error_text }}</div>
+                <div class="error-message">{{ error_text }}</div>
                 {% endif %}
 
                 <form action="{{ url_for('predict') }}" method="POST">
-                    <input type="text" name="url_input" placeholder="Paste suspicious web link here... (e.g., example-login-bank.com)" value="{{ url_input if url_input else '' }}" required>
+                    <input type="text" name="url_input"
+                        placeholder="Paste suspicious web link here... (e.g., example-login-bank.com)"
+                        value="{{ url_input if url_input else '' }}" required>
                     <button type="submit">Analyze URL</button>
                 </form>
 
                 {% if prediction_text %}
-                    <div class="result-box {{ button_class }}">
-                        <h2>{{ prediction_text }}</h2>
-                        <p>URL Target Profile Checked: <strong>{{ prediction_url }}</strong></p>
-                        <a href="{{ prediction_url }}" target="_blank" class="continue-button">
-                            {{ button_text }} &rarr;
-                        </a>
-                    </div>
+                <div class="result-box {{ button_class }}">
+                    <h2>{{ prediction_text }}</h2>
+                    <p>URL Target Profile Checked: <strong>{{ prediction_url }}</strong></p>
+                    <a href="{{ prediction_url }}" target="_blank" class="continue-button">
+                        {{ button_text }} &rarr;
+                    </a>
+                </div>
                 {% endif %}
             </main>
 
             <!-- SECTION 2: THE ANCHORED GOLDEN HOUR EMERGENCY MODULE -->
             <div id="emergency" class="emergency-banner">
-                <h2 style="color: var(--alert-red); margin-bottom: 5px; font-weight: 800; font-size: 1.85rem;">🚨 SCAMMED JUST NOW? ACT WITHIN THE GOLDEN HOUR! 🚨</h2>
-                <p style="color: white; font-weight: 500;">Reporting fraudulent transaction windows immediately increases funds recovery success vectors.</p>
-                
+                <h2 style="color: var(--alert-red); margin-bottom: 5px; font-weight: 800; font-size: 1.85rem;">🚨
+                    SCAMMED JUST NOW? ACT WITHIN THE GOLDEN HOUR! 🚨</h2>
+                <p style="color: white; font-weight: 500;">Reporting fraudulent transaction windows immediately
+                    increases funds recovery success vectors.</p>
+
                 <div class="step-container">
                     <div class="step-item">
                         <h3 style="color: var(--saffron);">Step 1: Emergency Line</h3>
-                        <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;">Dial the central cyber incidents reporting helpline immediately.</p>
+                        <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;">Dial the central cyber incidents
+                            reporting helpline immediately.</p>
                         <span class="emergency-number">1930</span>
                     </div>
-                    
+
                     <div class="step-item" style="border-top-color: white;">
                         <h3 style="color: white;">Step 2: File Formal FIR</h3>
-                        <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;">Log event evidence details directly onto the national registry portal.</p>
-                        <a href="https://cybercrime.gov.in" target="_blank" style="color: #00bcd4; display: block; margin-top: 15px; font-weight: bold; font-size: 1.15rem;">cybercrime.gov.in</a>
+                        <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;">Log event evidence details directly
+                            onto the national registry portal.</p>
+                        <a href="https://cybercrime.gov.in" target="_blank"
+                            style="color: #00bcd4; display: block; margin-top: 15px; font-weight: bold; font-size: 1.15rem;">cybercrime.gov.in</a>
                     </div>
 
                     <div class="step-item" style="border-top-color: var(--green);">
                         <h3 style="color: var(--green);">Step 3: Freeze Assets</h3>
-                        <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;">Instruct your bank to temporarily lock card modules and UPI tokens.</p>
+                        <p style="color: rgba(255,255,255,0.85); font-size: 0.9rem;">Instruct your bank to temporarily
+                            lock card modules and UPI tokens.</p>
                     </div>
                 </div>
             </div>
 
             <!-- SECTION 3: PHISHING SCAMS WITH F-PATTERN ACCORDION TOGGLES -->
-            <h2 id="scams" style="color: var(--saffron); border-bottom: 2px solid var(--green); padding-bottom: 8px; margin-top: 40px;">Prevalent Phishing-Link Scams in India</h2>
-            
+            <h2 id="scams"
+                style="color: var(--saffron); border-bottom: 2px solid var(--green); padding-bottom: 8px; margin-top: 40px;">
+                Prevalent Phishing-Link Scams in India</h2>
+
             <div style="margin-top: 20px;">
                 <!-- Scam 1 (Saffron Left Border Accent) -->
                 <details class="scam-accordion scam-1">
                     <summary class="scam-summary">
                         <div class="scam-summary-text-group">
                             <h3>1. Cloned NetBanking Portals (Lookalike Domains)</h3>
-                            <p>Attackers host visually identical replicas of banking portals to compromise authentication tokens.</p>
+                            <p>Attackers host visually identical replicas of banking portals to compromise
+                                authentication tokens.</p>
                         </div>
                         <span class="expand-arrow-toggle">▼</span>
                     </summary>
                     <div class="scam-details-content">
                         <div class="f-row">
                             <span class="f-lead">🛑 Mechanism Matrix:</span>
-                            Fraudsters distribute text threads stating your banking access expires tonight. The hyperlink opens a cloned portal interface capturing your credentials to immediately execute parallel malicious transactions.
+                            Fraudsters distribute text threads stating your banking access expires tonight. The
+                            hyperlink opens a cloned portal interface capturing your credentials to immediately execute
+                            parallel malicious transactions.
                         </div>
                         <div class="f-row">
                             <span class="f-lead defense">🛡️ Defense Rule:</span>
-                            Never use link markers inside text threads to log into financial apps. Official institutional endpoints in India strictly terminate in configurations like <code>.gov.in</code> or <code>.nic.in</code>.
+                            Never use link markers inside text threads to log into financial apps. Official
+                            institutional endpoints in India strictly terminate in configurations like
+                            <code>.gov.in</code> or <code>.nic.in</code>.
                         </div>
                     </div>
                 </details>
@@ -384,18 +494,22 @@
                     <summary class="scam-summary">
                         <div class="scam-summary-text-group">
                             <h3>2. PAN / Aadhaar KYC Verification Phishing Traps</h3>
-                            <p>Panicky warnings mimic official compliance documentation updates, redirecting victims to harvesting forms.</p>
+                            <p>Panicky warnings mimic official compliance documentation updates, redirecting victims to
+                                harvesting forms.</p>
                         </div>
                         <span class="expand-arrow-toggle">▼</span>
                     </summary>
                     <div class="scam-details-content">
                         <div class="f-row">
                             <span class="f-lead">🛑 Mechanism Matrix:</span>
-                            Automated text arrays indicate credit facilities will be permanently frozen unless you immediately complete mandatory document verification steps through an untrusted third-party hyperlink.
+                            Automated text arrays indicate credit facilities will be permanently frozen unless you
+                            immediately complete mandatory document verification steps through an untrusted third-party
+                            hyperlink.
                         </div>
                         <div class="f-row">
                             <span class="f-lead defense">🛡️ Defense Rule:</span>
-                            Central administrative desks never deploy block warnings containing hidden external routing links. Crosscheck compliance alerts directly inside official corporate client applications.
+                            Central administrative desks never deploy block warnings containing hidden external routing
+                            links. Crosscheck compliance alerts directly inside official corporate client applications.
                         </div>
                     </div>
                 </details>
@@ -405,36 +519,45 @@
                     <summary class="scam-summary">
                         <div class="scam-summary-text-group">
                             <h3>3. Electricity Disconnection & Logistics Gateway Scams</h3>
-                            <p>Deceptive forms scrape consumer credentials under the guise of processing overdue charges or tracking parcels.</p>
+                            <p>Deceptive forms scrape consumer credentials under the guise of processing overdue charges
+                                or tracking parcels.</p>
                         </div>
                         <span class="expand-arrow-toggle">▼</span>
                     </summary>
                     <div class="scam-details-content">
                         <div class="f-row">
                             <span class="f-lead">🛑 Mechanism Matrix:</span>
-                            Malicious alerts demand a token processing payment of ₹10 to avoid service cut-offs. The linked gateway records your debit card parameters and key logs your data patterns.
+                            Malicious alerts demand a token processing payment of ₹10 to avoid service cut-offs. The
+                            linked gateway records your debit card parameters and key logs your data patterns.
                         </div>
                         <div class="f-row">
                             <span class="f-lead defense">🛡️ Defense Rule:</span>
-                            Public utility infrastructure bodies do not coordinate operations via private messaging networks containing random checkout forms. Always query real bills inside verified utility portals.
+                            Public utility infrastructure bodies do not coordinate operations via private messaging
+                            networks containing random checkout forms. Always query real bills inside verified utility
+                            portals.
                         </div>
                     </div>
                 </details>
             </div>
 
             <!-- SECTION 4: LINK FRAUD RECOVERY & SUPPORT FAQ PACKET -->
-            <div id="faq" class="glass-block" style="margin-top: 50px; background: rgba(255,255,255,0.02); border-color: rgba(255,255,255,0.06);">
+            <div id="faq" class="glass-block"
+                style="margin-top: 50px; background: rgba(255,255,255,0.02); border-color: rgba(255,255,255,0.06);">
                 <h2 style="color: #ffc107; margin-bottom: 20px;">Link Fraud Recovery & Support FAQ</h2>
-                
+
                 <div class="faq-item">
                     <summary>I tapped a suspicious link from an SMS string. What actions do I take right now?</summary>
                     <div class="faq-pane">
                         <p><strong>Minimize potential damage immediately:</strong></p>
                         <ol style="margin-left: 20px; margin-top: 10px; line-height: 1.7;">
-                            <li><strong>Disconnect networks instantly:</strong> Switch your phone onto Airplane Mode immediately to stop background script cycles from transmitting device data profiles to remote hosts.</li>
+                            <li><strong>Disconnect networks instantly:</strong> Switch your phone onto Airplane Mode
+                                immediately to stop background script cycles from transmitting device data profiles to
+                                remote hosts.</li>
                             <li>Clear browser caches, navigation history, and active tracking cookies immediately.</li>
-                            <li>Check your device storage directories to make sure no background applications (like obscure `.apk` packages) were silently deployed.</li>
-                            <li>Change your high-priority banking passwords and access PIN codes using a different, clean machine terminal.</li>
+                            <li>Check your device storage directories to make sure no background applications (like
+                                obscure `.apk` packages) were silently deployed.</li>
+                            <li>Change your high-priority banking passwords and access PIN codes using a different,
+                                clean machine terminal.</li>
                         </ol>
                     </div>
                 </div>
@@ -442,12 +565,17 @@
                 <div class="faq-item">
                     <summary>A link prompted me to download a file, and now money is transferring out!</summary>
                     <div class="faq-pane">
-                        <p>This means your phone has been infected by a malicious screen-mirroring tool or an automated SMS forwarder:</p>
+                        <p>This means your phone has been infected by a malicious screen-mirroring tool or an automated
+                            SMS forwarder:</p>
                         <ol style="margin-left: 20px; margin-top: 10px; line-height: 1.7;">
-                            <li><strong>Cut off network signals:</strong> Turn off your Wi-Fi router or switch to Airplane Mode immediately to disconnect the attacker.</li>
-                            <li>Look through your installed applications list and remove any untrusted tools (like AnyDesk or QuickSupport variants).</li>
-                            <li>If touch panels lock up, trigger a hardware-level **Factory Reset** to clean out the system core.</li>
-                            <li>Call **1930** immediately from a clean device to instruct local financial enforcement teams to freeze target account lines.</li>
+                            <li><strong>Cut off network signals:</strong> Turn off your Wi-Fi router or switch to
+                                Airplane Mode immediately to disconnect the attacker.</li>
+                            <li>Look through your installed applications list and remove any untrusted tools (like
+                                AnyDesk or QuickSupport variants).</li>
+                            <li>If touch panels lock up, trigger a hardware-level **Factory Reset** to clean out the
+                                system core.</li>
+                            <li>Call **1930** immediately from a clean device to instruct local financial enforcement
+                                teams to freeze target account lines.</li>
                         </ol>
                     </div>
                 </div>
@@ -457,8 +585,10 @@
                     <div class="faq-pane">
                         <p>You can proactively report malicious links to help protect the broader online community:</p>
                         <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.7;">
-                            <li>Log onto the Ministry of Communications' central **Chakshu Portal** (hosted on Sanchar Saathi) to flag the sender's details and the associated malicious URL.</li>
-                            <li>Forward scam link text formats to the dedicated email desk managed by the Indian Computer Emergency Response Team at **report@cert-in.org.in**.</li>
+                            <li>Log onto the Ministry of Communications' central **Chakshu Portal** (hosted on Sanchar
+                                Saathi) to flag the sender's details and the associated malicious URL.</li>
+                            <li>Forward scam link text formats to the dedicated email desk managed by the Indian
+                                Computer Emergency Response Team at **report@cert-in.org.in**.</li>
                         </ul>
                     </div>
                 </div>
@@ -472,25 +602,36 @@
                         <h2 style="color: var(--saffron); margin-top: 0;">About The Project</h2>
                         <h3 style="color: #ffc107; font-size: 1.1rem; margin-top: 15px;">The Core Challenge</h3>
                         <p style="color: rgba(255,255,255,0.85); line-height: 1.6; margin-bottom: 15px;">
-                            Static validation blacklists struggle to intercept modern zero-hour threat structures since attackers continuously change host locations. This platform addresses that bottleneck by parsing 30 unique protocol, lexical, and structural characteristics directly from any suspect domain query.
+                            Static validation blacklists struggle to intercept modern zero-hour threat structures since
+                            attackers continuously change host locations. This platform addresses that bottleneck by
+                            parsing 30 unique protocol, lexical, and structural characteristics directly from any
+                            suspect domain query.
                         </p>
                         <h3 style="color: #ffc107; font-size: 1.1rem;">Machine Learning Architecture</h3>
                         <p style="color: rgba(255,255,255,0.85); line-height: 1.6;">
-                            Redirection metrics, subdomain anomalies, and page source characteristics are evaluated using a trained Gradient Boosting Classifier. By dynamically predicting potential safety vulnerabilities on demand, the project delivers predictive intelligence to secure our digital space.
+                            Redirection metrics, subdomain anomalies, and page source characteristics are evaluated
+                            using a trained Gradient Boosting Classifier. By dynamically predicting potential safety
+                            vulnerabilities on demand, the project delivers predictive intelligence to secure our
+                            digital space.
                         </p>
                     </div>
-                    
+
                     <div style="border-left: 1px solid rgba(255,255,255,0.1); padding-left: 20px;">
                         <h2 style="color: var(--green); margin-top: 0;">The Innovation Team</h2>
                         <p style="color: #ffc107; font-weight: bold; margin-bottom: 5px;">VIT BHOPAL UNIVERSITY</p>
-                        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 15px;">EPICS: Engineering Project in Community Service</p>
-                        
-                        <h3 style="color: white; font-size: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 20px;">Project Contributors</h3>
-                        <ul style="list-style: none; padding: 0; line-height: 1.8; color: rgba(255,255,255,0.9); font-size: 0.95rem;">
+                        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 15px;">Capstone</p>
+
+                        <h3
+                            style="color: white; font-size: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 20px;">
+                            Project Contributors</h3>
+                        <ul
+                            style="list-style: none; padding: 0; line-height: 1.8; color: rgba(255,255,255,0.9); font-size: 0.95rem;">
                             <li>🛡️ Suryansh Sapehia</li>
                             <li>🛡️ Pragati Singh</li>
                             <li>🛡️ Ritika Raghuvanshi</li>
                             <li>🛡️ Prasiddhi Jain</li>
+                            <li>🛡️ Muskan Kumari</li>
+                            <li>🛡️ Manya Chopra</li>
                         </ul>
                     </div>
                 </div>
@@ -498,11 +639,14 @@
 
         </div>
 
-        <footer style="margin-top: 50px; background: rgba(5, 5, 10, 0.98); border-top: 4px solid var(--saffron); padding: 25px 0; text-align: center;">
+        <footer
+            style="margin-top: 50px; background: rgba(5, 5, 10, 0.98); border-top: 4px solid var(--saffron); padding: 25px 0; text-align: center;">
             <p style="color: white; margin-bottom: 5px;"><strong>Jai Hind | Cyber Safe India Hub</strong></p>
-            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">Official Indian Government web assets strictly use verified domains ending in <strong>.gov.in</strong> or <strong>.nic.in</strong></p>
+            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">Official Indian Government web assets strictly
+                use verified domains ending in <strong>.gov.in</strong> or <strong>.nic.in</strong></p>
         </footer>
     </div>
 
 </body>
+
 </html>
